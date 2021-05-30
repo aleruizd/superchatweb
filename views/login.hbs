@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperChat</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+</head>
+
+<body class="flex">
+    <div class="logo">
+        <h3><span>Super</span>Chat</h3>
+    </div>
+    <div class="left-side">
+        <div class="content">
+            <h2>Hi, Friend!</h2>
+            <p>Welcome to the most spectacular chat on the internet. If you don't have an account, you can register.</p>
+            <a href="/register"><button class="button white-button">Register</button></a>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="content">
+            <h2>Login</h2>
+            <form action="/login">
+                <span class="error-message display-none"></span>
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <input class="button light-blue-button" type="submit" value="Login">
+            </form>
+            <a class="only-mobile" href="/register">Register here</a>
+        </div>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

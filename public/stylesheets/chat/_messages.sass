@@ -1,0 +1,83 @@
+.messages-side
+  border-left: 0.1rem solid #CFD8DC
+  width: 100%
+  margin-top: 5rem
+
+.messages-window
+  display: flex
+  flex-direction: column
+  height: calc(100% - 2rem) /*MINUS THE MESSAGE-INPUT-AREA HEIGHT*/
+  overflow-y: auto
+  overflow-x: hidden
+  scrollbar-width: thin
+
+.contact-message,.own-message
+  max-width: 60%
+  padding: 1rem 2rem
+  border-radius: 1rem
+  margin-top: 2rem
+  margin: 1rem 2rem
+  overflow-wrap: break-word
+  animation-duration: 0.2s
+  animation-fill-mode: forwards
+
+.contact-message
+  align-self: flex-start
+  background-color: white
+  animation-name: contact-message
+
+.own-message
+  align-self: flex-end
+  background-color: $light-blue
+  color: white
+  animation-name: own-message
+
+.message-input-area
+  display: flex
+  justify-content: center
+  height: 6rem
+  padding: 1rem
+  margin-top: 1rem
+  border-top: 0.1rem solid #E0E0E0
+  input[type=text]
+    border-radius: 1rem 0 0 1rem
+    border: none
+    padding: 1rem
+    width: 90%
+  .send-button
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 5rem
+    border: none
+    border-radius: 0 1rem 1rem 0
+    color: white
+    cursor: pointer
+    background: $light-blue
+    transition: background 0.2s
+  .send-button:hover
+    background: $ultra-light-blue
+  
+@media(min-width: $breakpoint-tablet)
+    .messages-side
+      margin-top: 0
+
+    .messages-window
+      height: calc(100% - 7rem)
+
+    .messages-side
+      width: 75%
+
+    
+@keyframes own-message
+  0%
+    margin-right: -100%
+  100%
+    margin-right: 2rem
+
+@keyframes contact-message
+  0%
+    margin-left: -100%
+  100%
+    margin-left: 2rem
+    

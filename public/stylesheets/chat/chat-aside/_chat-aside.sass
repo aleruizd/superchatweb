@@ -1,0 +1,31 @@
+.chat-aside
+    width: 100%
+    left: -100%
+    position: absolute
+    animation-duration: 0.5s
+    animation-fill-mode: forwards
+    margin-top: 5rem
+
+@media(min-width: $breakpoint-tablet)
+    .chat-aside
+        position: initial
+        width: 25%
+        left: 0
+        position: initial
+        animation: none
+        margin-top: 0
+
+@import "_contacts"
+@import "_bottom-menu"
+
+@keyframes chatAsideOpen
+    0%
+        left: -100%
+    100%
+        left: 0
+
+@keyframes chatAsideClose
+    0%
+        left: 0
+    100%
+        left: -100%

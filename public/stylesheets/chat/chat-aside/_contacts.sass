@@ -1,0 +1,60 @@
+.contacts-side
+    display: flex
+    flex-direction: column
+    height: calc( 100vh -  15rem)
+
+.search-contact
+    display: flex
+    justify-content: center
+    align-items: center
+    border-bottom: 0.1rem solid #CFD8DC
+    height: 8rem
+    input
+        width: 90%
+        padding: 0.5rem 1rem
+        border: 0.1rem solid #CFD8DC
+        border-radius: 0.5rem
+
+.contacts
+    overflow-y: auto
+    scrollbar-width: thin
+
+.contact
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 2rem
+    border-bottom: 0.1rem solid #CFD8DC
+    height: 6rem
+    cursor: pointer
+    animation-duration: 0.5s
+    animation-name: contactAdded
+    transition: background 0.3s
+    .last-message-date
+        font-weight: 300
+.contact:hover
+    background: #CFD8DC !important
+
+.unreaded-messages-counter
+    display: none
+    color: white
+    padding: 0.25rem 0.6rem
+    border-radius: 100%
+    background: red
+    margin-left: 1rem
+
+
+@media(min-width: $breakpoint-tablet)
+    .contacts-side
+        height: calc( 100vh -  11rem)
+
+@keyframes contactAdded
+    0%
+        width: 100%
+        margin-left: -100%
+        border-right: 0.1rem solid #CFD8DC
+    100%
+        width: 100%
+        margin-left: 0%
+        border-right: 0.1rem solid #CFD8DC
+
